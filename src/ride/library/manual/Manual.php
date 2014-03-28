@@ -135,7 +135,14 @@ class Manual {
      * @return null
      */
     public function savePage(Page $page) {
-        $file = $this->directory->getChild($page->getPath(false) . $page->getName() . '.md');
+        $path = $page->getPath(true);
+        if ($path) {
+            $path .= '/';
+        }
+
+        $path .= $page->getName() . '.md';
+
+        $file = $this->directory->getChild($path);
 
         $parent = $file->getParent();
         $parent->create();
