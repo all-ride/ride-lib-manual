@@ -4,7 +4,7 @@ namespace ride\library\manual;
 
 use ride\library\decorator\Decorator;
 use ride\library\html\HtmlParser;
-use ride\library\String;
+use ride\library\StringHelper;
 
 /**
  * Data container for a wiki page
@@ -165,8 +165,7 @@ class Page {
             $title = trim(substr($line, $level));
             $level -= 1;
 
-            $slug = new String($title);
-            $slug = $slug->safeString();
+            $slug = StringHelper::safeString($title);
 
             $original = '<h' . $level . '>' . $title . '</h' . $level . '>';
             $replacement = '<a name="' . $slug . '"></a>' . $original;
