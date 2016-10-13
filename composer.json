@@ -2,7 +2,6 @@
     "name": "ride/lib-manual",
     "description": "Manual library of the Ride framework",
     "license": "MIT",
-    "version": "0.1.2",
     "authors": [
         {
             "name": "Joris Vandeweerd",
@@ -10,9 +9,9 @@
         }
     ],
     "require": {
-        "ride/lib-common": ">=0.4.0",
-        "ride/lib-html": ">=0.1.0",
-        "ride/lib-system": ">=0.4.0"
+        "ride/lib-common": "^1.0.0",
+        "ride/lib-html": "^1.0.0",
+        "ride/lib-system": "^1.0.0"
     },
     "autoload": {
         "psr-0": {
